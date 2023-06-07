@@ -1,0 +1,218 @@
+.slick-prev {
+    background : #13dd56 !important;
+    border     : 2px solid #d7d7d7 !important;
+    // position: relative !important;
+    left       : -10px !important;
+    z-index    : 1000 !important;
+    height     : 48px !important;
+    width      : 44px !important;
+
+    &:hover {
+        background: #d7d7d7 !important;
+    }
+}
+
+.slick-prev :before {
+    color  : red !important;
+    content: "\e257" !important;
+
+}
+
+.slick-next {
+    background : #13dd56 !important;
+    border     : 2px solid #d7d7d7 !important;
+    // position: relative !important;
+    right      : -10px !important;
+    z-index    : 1000 !important;
+    height     : 48px !important;
+    width      : 44px !important;
+
+    &:hover {
+        background: #d7d7d7 !important;
+    }
+}
+
+.slick-disabled {
+    display: none !important;
+}
+
+.slick-next :before {
+    content: "\e258" !important;
+    color  : red !important;
+}
+
+.section-share {
+    &.section-specialty {
+        background: white;
+    }
+
+    &.section-outstanding-doctor {
+        background: white;
+    }
+
+    &.section-health-facility {
+        background   : #f5f5f5;
+        border-bottom: 3px solid #efeef5;
+    }
+    &.section-handbook {
+        background   : #f5f5f5;
+    }
+
+    &.section-about {
+        height       : 500px !important;
+        border-top   : 1px solid #f5f5f5;
+        border-bottom: 1px solid #f5f5f5;
+
+    }
+
+}
+
+.section-share {
+    height: 330px;
+
+    .section-body {
+        .section-customize {
+            .bg-image {
+                height: 150px;
+                width : 278px;
+
+                background-position: center center;
+                background-repeat  : no-repeat;
+                background-size    : cover;
+                background-color   : #eee;
+
+
+                &.section-specialty {
+                    // background-image: url('../../assets/specialty/120331-co-xuong-khop.jpg');
+                }
+
+                &.section-health-facility {
+                    height          : 150px !important;
+                    object-fit      : cover !important;
+                    background-size : contain;
+                    background-color: white;
+                }
+
+                &.section-outstanding-doctor {
+                    // background-image: url('../../assets/outstandingdoctor/114430-bshung.jpg');
+                    width        : 120px;
+                    height       : 120px;
+                    border-radius: 50%;
+                }
+
+                &.section-handbook {
+                    background-image: url('../../assets/handbook/233219-meso-hn.jpg');
+                }
+            }
+        }
+
+    }
+
+
+    .section-container {
+        margin        : 0 180px;
+        display       : flex;
+        flex-direction: column;
+
+        .section-header {
+            height       : 60px;
+            margin-bottom: 30px;
+            padding-top  : 30px;
+
+            .title-section {
+                font-size  : 22px;
+                font-weight: 600;
+            }
+
+            .btn-section {
+                float         : right;
+                padding       : 10px 15px;
+                border        : none;
+                outline       : none;
+                display       : block;
+                background    : #ebebeb;
+                color         : black;
+                cursor        : pointer;
+                text-transform: uppercase;
+
+                &:hover {
+                    color     : #fff;
+                    background: #f7d800;
+                }
+            }
+        }
+    }
+
+}
+
+.section-outstanding-doctor {
+    .outer-bg {
+        display        : flex;
+        justify-content: center;
+        margin-bottom  : 10px;
+    }
+}
+
+
+
+.section-customize {
+    padding: 5px;
+    cursor : pointer;
+
+    .customize-border {
+        padding: 20px;
+        width  : 278px;
+        height : 150px;
+    }
+}
+
+.home-footer {
+    text-align : center;
+    padding-top: 8px;
+
+    a {
+        text-decoration: unset;
+    }
+
+
+}
+
+.section-about {
+    padding: 0 100px;
+
+    .section-about-header {
+        padding    : 20px 10px;
+        font-size  : 20px;
+        font-weight: 600;
+    }
+
+    .section-about-content {
+        display: flex;
+        gap    : 15px;
+        width  : 100%;
+
+        .content-left {
+            width: 60%;
+        }
+
+        .content-right {
+            width: 40%;
+
+            a {
+                font-size      : 25px;
+                font-weight    : 400;
+                text-align     : center;
+                letter-spacing : 4;
+                text-decoration: unset;
+                color          : black;
+            }
+
+            p {
+                margin-top : 10px;
+                font-size  : 15px;
+                text-align : justify;
+                line-height: 1.4;
+            }
+        }
+    }
+}

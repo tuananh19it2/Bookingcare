@@ -67,7 +67,6 @@ class OutstandingDoctor extends Component {
                     <div>
                       <div>{language === LANGUAGES.VI ? nameVi : nameEn}</div>
                     </div>
-                    <div>Cơ xương khớp</div>
                   </div>
                 </div>
               </div>

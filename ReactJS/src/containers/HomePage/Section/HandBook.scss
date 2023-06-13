@@ -1,0 +1,22 @@
+.handbook-child {
+    cursor : pointer;
+    display: flex !important;
+    width  : 100%;
+
+    .bg-image .section-handbook {
+        flex-grow: 3;
+    }
+
+    .handbook-name {
+        margin-left: 10px;
+        flex-grow  : 1;
+        width      : 35%;
+        font-weight: bold;
+        font-size  : 16px;
+
+        &:hover {
+            color: #45c3d2;
+        }
+
+    }
+}

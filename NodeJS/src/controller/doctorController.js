@@ -1,5 +1,19 @@
 import doctorService from "../services/doctorService";
 
+
+let getSearchDoctor = async(req, res, next) => {
+   let query = req.query.q;
+   try {
+    let doctors = await doctorService.getAllDoctors();
+     let result =  doctors.data.filter(doc  => 
+      doc.firstName.toLowerCase().includes(query.toLowerCase())  ||  doc.lastName.toLowerCase().includes(query.toLowerCase())
+    )
+    res.json(result)
+   } catch (error) {
+    next(error);
+   }
+}
+
 let getTopDoctorHome = async (req, res) => {
   let limit = req.query.limit;
   if (!limit) limit = 10;
@@ -27,6 +41,19 @@ let getAllDoctors = async (req, res) => {
     });
   }
 };
+
+let getAllDoctorForSearch = async (req, res) => {
+  try {
+    let doctors = await doctorService.getAllDoctors();
+    return doctors;
+  } catch (e) {
+    console.log(e);
+    return res.status(200).json({
+      errCode: -1,
+      errMessage: "Error from server",
+    });
+  }
+}
 
 let postInforDoctor = async (req, res) => {
   try {
@@ -120,7 +147,22 @@ let getListPatientForDoctor = async (req, res) => {
   }
 }
 
+let sendRemedy = async (req, res) => {
+  try {
+    let infor = await doctorService.sendRemedy(req.body);
+    return res.status(200).json(infor);
+  } catch (e) {
+    console.log(e);
+    return res.status(200).json({
+      errCode: -1,
+      errMessage: "Error from server",
+    });
+  }
+}
+
 module.exports = {
+  getAllDoctorForSearch: getAllDoctorForSearch,
+  getSearchDoctor: getSearchDoctor,
   getTopDoctorHome: getTopDoctorHome,
   getAllDoctors: getAllDoctors,
   postInforDoctor: postInforDoctor,
@@ -129,5 +171,6 @@ module.exports = {
   getScheduleByDate: getScheduleByDate,
   getExtraInfoDoctorById: getExtraInfoDoctorById,
   getProfileDoctorById: getProfileDoctorById,
-  getListPatientForDoctor: getListPatientForDoctor
+  getListPatientForDoctor: getListPatientForDoctor,
+  sendRemedy: sendRemedy
 };

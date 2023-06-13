@@ -20,7 +20,8 @@
     "child3": "General examination",
     "child4": "Medical test",
     "child5": "Mental health",
-    "child6": "Dental examination"
+    "child6": "Dental examination",
+    "placeholder": "Find a medical specialty"
   },
   "menu": {
     "admin": {
@@ -59,7 +60,12 @@
   "homepage": {
     "outstanding-doctor": "Outstanding Doctor of the Week",
     "more-info": "SEE MORE",
-    "specialty-popular": "Popular specialties"
+    "specialty-popular": "Popular specialties",
+    "health-facility": "Outstanding medical facility",
+    "handbook": "HankBook",
+    "about": "Science and technology to support medical services",
+    "b": "Application of science and technology in medical examination and treatment",
+    "p": "Over the years, Vietnam's health sector has achieved encouraging achievements in all fields of medical examination and treatment. From the investment and application of high-tech equipment and techniques such as: laparoscopic surgery, lithotripsy, surgery to remove the vitreous outside the capsule (Pha-co method) to microsurgery techniques to create imaging, application of laser technology in medicine, accelerators in cancer treatment. Success of in vitro fertilization; Successfully applied many interventional cardiology techniques such as: open heart surgery, heart valve replacement, chamber angiography, coronary angioplasty, coronary artery bypass grafting, arrhythmia treatment, etc. Most recently, the initial success of the first brain dead liver transplant in Vietnam, at Viet Duc Hospital, has given hope to critically ill patients..."
   },
   "manage-schedule": {
     "title": "Manage doctor's examination plan",

@@ -1,0 +1,82 @@
+.detail-handbook-container {
+    .detail-handbook-body {
+
+        display: flex;
+
+        .content-left {
+            width           : 78%;
+            background-color: #ede9e9;
+
+            .handbook-name {
+                font-size  : 26px;
+                margin-top : 25px;
+                color      : #337ab7;
+                margin-left: 35px;
+                font-weight: 600;
+            }
+
+            .descriptionHTML {
+                margin-left: 35px;
+            }
+
+            img {
+                width        : 1115px;
+                height       : 620px;
+                margin-top   : 10px;
+                margin-bottom: 10px;
+                margin-left  : 5px !important;
+            }
+
+            p,
+            h1,
+            h3,
+            h5,
+            li {
+                text-decoration: unset;
+                text-align     : justify;
+                margin-right   : 45px;
+                font-size      : 18px;
+            }
+        }
+
+        .content-right {
+            width  : 22%;
+            display: block;
+            margin-right: 35px;
+            text-align: justify;
+            
+            .content-right-child {
+                position: fixed;
+                padding-right: 40px !important;
+
+                h1 {
+                    margin-left: 10px;
+                    color      : #337ab7;
+                    font-size  : 25px;
+                    cursor     : pointer;
+                }
+
+                p,
+                h3,
+                h5 {
+                    text-decoration: unset;
+                    text-align     : justify;
+                    font-size      : 18px;
+                    margin-right: 45px;
+                    cursor         : pointer;
+                }
+
+                a {
+                    color          : black;
+                    text-decoration: unset;
+                    font-size      : 18px;
+
+                    &:hover {
+                        color: #337ab7;
+                    }
+                }
+            }
+
+        }
+    }
+}

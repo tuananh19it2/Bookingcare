@@ -10,6 +10,8 @@ import "slick-carousel/slick/slick-theme.css";
 import HandBook from './Section/HandBook';
 import About from './Section/About';
 import HomeFooter from './HomeFooter';
+import ChatBotPage from './ChatBoxPage';
+
 
 
 class HomePage extends Component {
@@ -22,6 +24,14 @@ class HomePage extends Component {
             slidesToShow: 4,
             slidesToScroll: 1,
         };
+
+        let handbookSetting = {
+            dots: false,
+            infinite: false,
+            speed: 500,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+        }
         return (
             <div> 
                 <HomeHeader isShowBanner={true}/> 
@@ -30,9 +40,11 @@ class HomePage extends Component {
                 /> 
                 <HealthFacility settings={settings}/>
                 <OutstandingDoctor settings={settings}/>
-                <HandBook settings={settings}/>
+                <HandBook settings={handbookSetting}/>
                 <About />
                 <HomeFooter />
+                <ChatBotPage />
+
             </div>
         );
     }

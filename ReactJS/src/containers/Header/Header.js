@@ -9,7 +9,6 @@ import { LANGUAGES, USER_ROLE } from '../../utils/constant';
 import { FormattedMessage } from 'react-intl';
 import _ from 'lodash';
 
-
 class Header extends Component {
 
     constructor(props) {

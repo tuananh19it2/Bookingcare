@@ -5,6 +5,7 @@ import doctorController from "../controller/doctorController";
 import patientController from "../controller/patientController";
 import specialtyController from "../controller/specialtyController";
 import clinicController from "../controller/clinicController";
+import handbookController from "../controller/handbookController";
 
 
 let router = express.Router();
@@ -31,10 +32,13 @@ let initWebRoutes = (app) => {
     router.get('/api/get-profile-doctor-by-id', doctorController.getProfileDoctorById);
 
     router.get('/api/get-list-patient-for-doctor', doctorController.getListPatientForDoctor);
-
-
+    router.post('/api/bulk-create-schedule', doctorController.bulkCreateSchedule);
+    router.post('/api/send-remedy', doctorController.sendRemedy);
+    
+    
     router.post('/api/patient-book-appointment', patientController.postBookAppointment);
     router.post('/api/verify-book-appointment', patientController.postVerifyBookAppointment);
+   
 
     router.post('/api/create-new-specialty', specialtyController.createSpecialty);
     router.get('/api/get-all-specialty', specialtyController.getAllSpecialty);
@@ -43,6 +47,14 @@ let initWebRoutes = (app) => {
     router.post('/api/create-new-clinic', clinicController.createClinic);
     router.get('/api/get-all-clinic', clinicController.getAllClinic);
     router.get('/api/get-detail-clinic-by-id', clinicController.getDetailClinicById);
+
+    router.post('/api/create-new-handbook', handbookController.createHandBook);
+    router.get('/api/get-all-handbook', handbookController.getAllHandBook);
+    router.get('/api/get-detail-handbook-by-id', handbookController.getDetailHandBookById);
+    router.get('/api/get-search', doctorController.getSearchDoctor);
+
+  
+
 
 
     return app.use("/", router);    

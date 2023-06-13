@@ -19,7 +19,8 @@
     "child3": "Khám tổng quát",
     "child4": "Xét nghiệm y học",
     "child5": "Sức khỏe tinh thần",
-    "child6": "Khám nha khoa"
+    "child6": "Khám nha khoa",
+    "placeholder": "Tìm chuyên khoa khám bệnh"
   },
   "menu": {
     "admin": {
@@ -58,7 +59,12 @@
   "homepage": {
     "outstanding-doctor": "Bác sĩ nổi bật tuần qua",
     "more-info": "Xem thêm",
-    "specialty-popular": "Chuyên khoa phổ biến"
+    "specialty-popular": "Chuyên khoa phổ biến",
+    "health-facility": "Cơ sở y tế nổi bật",
+    "handbook": "Cẩm nang",
+    "about": "Khoa học kỹ thuật hỗ trợ dịch vụ y tế",
+    "b": "Ứng dụng khoa học-kĩ thuật cao trong khám chữa bệnh",
+    "p": "Trong những năm qua, ngành Y tế Việt Nam đã đạt được những thành tựu đáng khích lệ trên tất cả các lĩnh vực khám và điều trị bệnh. Từ việc đầu tư, ứng dụng các trang, thiết bị, kỹ thuật công nghệ cao như: phẫu thuật nội soi, tán sỏi, phẫu thuật lấy thể thủy tinh ngoài bao (phương pháp Pha-co) đến các kỹ thuật vi phẫu tạo hình, ứng dụng công nghệ la-de vào y học, máy gia tốc trong điều trị ung thư. Thành công của việc thụ tinh trong ống nghiệm; Ứng dụng thành công nhiều kỹ thuật tim mạch can thiệp như: mổ tim hở, thay van tim, chụp buồng tim, nong động mạch vành, bắc cầu nối động mạch vành, điều trị loạn nhịp tim, v.v. Gần đây nhất, thành công bước đầu của ca ghép gan được cấy ghép từ người chết não đầu tiên ở Việt Nam, tại Bệnh viện Việt Ðức đã tiếp thêm hy vọng cho những người bệnh hiểm nghèo..."
   },
   "manage-schedule": {
     "title": "Quản lý kế hoạch khám bệnh của bác sĩ",

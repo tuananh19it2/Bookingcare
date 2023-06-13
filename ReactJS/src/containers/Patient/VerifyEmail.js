@@ -14,7 +14,10 @@ class VerifyEmail extends Component {
     }
   }
 
+
   async componentDidMount() {
+   
+
     if(this.props.location && this.props.location.search) {
         let urlParams = new URLSearchParams(this.props.location.search);
         let token = urlParams.get('token');
@@ -24,8 +27,11 @@ class VerifyEmail extends Component {
             token: token,
             doctorId: doctorId
         })
+              
+        console.log(res);
 
         if(res && res.errCode === 0) {
+          
             this.setState({
                 statusVerify: true,
                 errCode: res.errCode

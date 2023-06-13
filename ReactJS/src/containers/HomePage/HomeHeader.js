@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState} from 'react';
 import { connect } from 'react-redux';
 import './HomeHeader.scss';
 import logo from '../../assets/logo-top.png'
@@ -6,8 +6,29 @@ import { FormattedMessage } from 'react-intl';
 import { LANGUAGES } from '../../utils/constant';
 import { changeLanguageApp } from '../../store/actions/appActions';
 import { withRouter } from "react-router";
+import axios from 'axios';
 
 class HomeHeader extends Component {
+
+
+    constructor(props){
+        super(props)
+        this.state = {
+          searchQuery: "",
+          searchResult: []
+        }
+    
+      }
+
+      handleSearch = () => {
+        
+        const query = this.state.searchQuery
+        this.setState({searchQuery: " "})
+        axios.get(`http://localhost:8080/api/get-search?q=${query}`)
+        .then(response => this.setState({searchResult: response.data}))
+        .catch(error => console.log(error))
+        
+      }
 
     changeLanguage = (language) => {
         this.props.changeLanguageAppRedux(language)
@@ -20,11 +41,11 @@ class HomeHeader extends Component {
 
     }
 
-
-
+   
     render() {
         let language = this.props.language;
-
+        var  searchResult = this.state.searchResult
+    
         return (
         <React.Fragment>
             <div className='home-header-container'>             
@@ -62,13 +83,32 @@ class HomeHeader extends Component {
             {this.props.isShowBanner === true && 
             <div className='home-header-banner'>
                 <div className='content-up'>
-                    <div className='title1'><FormattedMessage id="banner.title1" /></div>
-                    <div className='title2'><FormattedMessage id="banner.title2" /></div>
-                    <div className='search'>
-                         <i className="fa-solid fa-magnifying-glass"></i>
-                         <input type='text' placeholder='Tìm chuyên khoa khám bệnh'/>
-                    </div>
-                </div>
+  <div className='title1'><FormattedMessage id="banner.title1" /></div>
+  <div className='title2'><FormattedMessage id="banner.title2" /></div>
+  <div className='search'>
+    <i className="fa-solid fa-magnifying-glass" onClick={this.handleSearch}></i>
+    <input 
+      type='text' 
+      value={this.state.searchQuery}
+      placeholder='Tìm chuyên khoa khám bệnh'
+      onChange={(e) => this.setState({searchQuery: e.target.value})}
+    />
+    {searchResult.length > 0 && (
+      <ul className='search-results'>
+        <li>
+        {
+            searchResult.map((re) => 
+            <a href={`/detail-doctor/${re.id}`}>{re.firstName}</a>
+            )
+        }
+        </li>
+      </ul>
+    )}
+     
+    
+  </div>
+</div>
+                
                 <div className='content-down'>
                     <div className='options'>
                         <div className='option-child'>
